@@ -1,23 +1,19 @@
-name: C/C++ CI
+name: buildandtest
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: push
 
 jobs:
+
   build:
 
+    name: Build and test program
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: |
+          cd lab1/
+          make lab1test
+          ./lab_1_test
