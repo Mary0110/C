@@ -6,7 +6,6 @@ jobs:
 
   build:
 
-    name: Build and test program
     runs-on: ubuntu-latest
 
     steps:
