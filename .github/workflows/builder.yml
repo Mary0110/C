@@ -11,8 +11,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-
-      - run: |
+      - name: qwe
+        run: |
           cd lab1/
           make lab1test
           ./lab_1_test
