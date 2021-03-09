@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stdio.h>
 #include "main.h"
 
 void test_case1(void)
