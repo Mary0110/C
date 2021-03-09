@@ -15,3 +15,4 @@ jobs:
       - run: |
           cd lab1/
           make lab1test
+          lab_1_test
