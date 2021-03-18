@@ -20,7 +20,7 @@ jobs:
       
       - name: Build2
         run: |
-          cd lab2/21
+          cd lab_2/21
           make lab2test
           ./test
            cd ../22
