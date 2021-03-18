@@ -23,7 +23,7 @@ jobs:
           cd lab2/21
           make lab2test
           ./test
-           cd ..lab2/22
+           cd ../22
           make test
           ./test
           
