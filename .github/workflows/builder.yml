@@ -12,8 +12,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
         
-      - run: |
+      - name: Build1
+        run: |
           cd lab1/
           make lab1test
           ./test
+      
+      - name: Build2
+        run: |
+          cd lab2/21
+          make lab2test
+          ./test
+           cd ..lab2/22
+          make test
+          ./test
+          
 
