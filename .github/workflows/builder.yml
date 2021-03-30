@@ -27,4 +27,11 @@ jobs:
           make test
           ./test
           
+      - name: Build3
+        run: |
+          cd lab3/
+          make lab3test
+          ./test
+      
+          
 
