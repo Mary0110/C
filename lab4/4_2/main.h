@@ -1,0 +1,1 @@
+void change(char* str, int size, int strnum);
