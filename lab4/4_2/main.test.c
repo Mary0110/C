@@ -5,7 +5,7 @@
 void test_case1(void)
 {
     char str[5] = "12345";
-    change(str, 5, 1);
+    change(str, 4, 1);
     assert(str[0] == '5');
     assert(str[1] == '1');
     assert(str[2] == '2');
