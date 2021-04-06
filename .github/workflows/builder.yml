@@ -32,6 +32,14 @@ jobs:
           cd lab3/
           make lab3test
           ./test
-      
+          
+      - name: Build4
+        run: |
+          cd lab4/4_1
+          make lab4_1test
+          ./test
+           cd ../4_2
+          make lab4_2test
+          ./test
           
 
