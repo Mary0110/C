@@ -1,5 +1,6 @@
 #include <assert.h>
 #include "main.h"
+#include <math.h>
 
 void test_1(void)
 {
@@ -10,19 +11,19 @@ void test_1(void)
 void test_2(void)
 {
     int b = sinFirst(4, 1, 0.1);
-    assert(b - 6 < 0.000001);
+    assert(abs(b - 6) < 0.000001);
 }
 
 void test_3(void)
 {
     int c = sinSecond(45.65, 1, 0.1111);
-    assert(c - 2 < 0.000001);
+    assert(abs(c - 2) < 0.000001);
 }
 
 void test_4(void)
 {
     double c = subFunct(2, 1);
-    assert(c - 2 < 0.000001);
+    assert(abs(c - 2) < 0.000001);
 }
 
 #undef main
