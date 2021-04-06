@@ -1,6 +1,7 @@
 #include <assert.h>
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 void test_1(void)
 {
@@ -10,14 +11,14 @@ void test_1(void)
 
 void test_2(void)
 {
-    int b = sinFirst(4, 1, 0.1);
-    assert(abs(b - 6) < 0.000001);
+    int b = sinFirst(5, 0.1, 1);
+    assert(b == 8);
 }
 
 void test_3(void)
 {
-    int c = sinSecond(45.65, 1, 0.1111);
-    assert(abs(c - 2) < 0.000001);
+    int c = sinSecond(45.65, 0.1111, 1);
+    assert(c == 20);
 }
 
 void test_4(void)
