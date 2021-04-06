@@ -25,7 +25,7 @@ int main(void)
     int size = 0, strnum = 0; 
 
     FILE* fin;
-    fin = fopen("D:\\labs\\progr\\lab4\\4_2\\data.txt", "r");
+    fin = fopen("data.txt", "r");
     if (!fin)
     { 
         printf("File does not exist.");
