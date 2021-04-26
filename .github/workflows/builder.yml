@@ -38,7 +38,7 @@ jobs:
           cd lab4/4_1
           make lab4_1test
           ./test
-           cd ../4_2
+          cd ../4_2
           make lab4_2test
           ./test
           
