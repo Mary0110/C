@@ -46,7 +46,7 @@ jobs:
         run: |
           cd lab5/
           make lab5test
-          ./test
+          ./test5
           
           
 
