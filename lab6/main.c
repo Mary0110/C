@@ -10,7 +10,7 @@ int main(void)
     tnode* rootNew = NULL;
 
     FILE* fp;
-    fopen_s(&fp, "lab6.txt", "r");
+    fopen(&fp, "lab6.txt", "r");
     if (!fp)
         exit(1);
     while (fgets(buffer, 128, fp) != NULL)
