@@ -53,5 +53,3 @@ jobs:
           cd lab6/
           make lab6test
           ./test6
-          
-
