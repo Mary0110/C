@@ -315,7 +315,7 @@ int main(void)
             break;
         }
     }
-        fopen_s(&outputFile, "output.txt", "w");
+        outputFile=fopen("output.txt", "w");
         if (outputFile == NULL)
             exit(1);
         print_readers(readers, outputFile);
