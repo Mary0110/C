@@ -54,7 +54,7 @@ jobs:
           make lab6test
           ./test6
           
-      - name: Build7
+      - name: Build71
         run: |
           cd lab7/
           make lab7test
