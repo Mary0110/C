@@ -16,7 +16,7 @@ readerList_t* readReaderList(const char* filename)
         temp->head = temp->tail = NULL;
     }
 
-     fopen_s(&file,filename, "r");
+     file=fopen(filename, "r");
     if (file == NULL)
         exit(1);
 
