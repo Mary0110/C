@@ -14,7 +14,9 @@ void testreadBookList(bookList_t* list)
 
 void testreadReaderList(readerList_t* list)
 {
-	 list= readReaderList("readers.txt");
+	char filename[20];
+    	strcpy(filename, "readers.txt");
+	 list= readReaderList(filename);
 	assert(list != NULL);
 }
 void  testdeleteReaderList(readerList_t** list)
@@ -36,7 +38,10 @@ void  testsearchReader(readerList_t* readerList)
 }
 void testprint_readers(readerList_t* list)
 {
-	FILE* outputFile = NULL; outputFile=fopen ("output.txt", "w");
+	FILE* outputFile = NULL;
+	char filename[20];
+    	strcpy(filename, "output.txt");
+	outputFile=fopen (filename, "w");
 	if (outputFile == NULL)
 		exit(1);
 	assert(print_readers(list, outputFile) == 0);
@@ -97,15 +102,19 @@ void testcountBorrowed(bookList_t* list)
 
 void testprint_list(bookList_t* list)
 {
-	FILE* outputFile = NULL; outputFile=fopen( "output2.txt", "w");
+	FILE* outputFile = NULL; 
+	char filename[20];
+    	strcpy(filename, "output2.txt");
+	outputFile=fopen( filename, "w");
 	if (outputFile == NULL)
 		exit(1);
 	assert(print_list(list, outputFile) == 0);
 }
 void testsearchBook(bookList_t* List)
 {
-	const char* name = "1984";
-	assert(searchBook(List, name) != NULL);
+	/*const char* name */char filename[20];
+    	strcpy(filename, "1984");
+	assert(searchBook(List, filename) != NULL);
 }
 
 #undef main
