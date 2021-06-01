@@ -8,6 +8,7 @@ void testreadBookList(bookList_t* list)
 {
 	char filename[20];
     	strcpy(filename, "lib.txt");
+	printf("ins");
 	list = readBookList(filename);
 	assert(list != NULL);
 }
