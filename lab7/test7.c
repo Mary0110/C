@@ -5,7 +5,9 @@
 
 void testreadBookList(bookList_t* list)
 {
-	list = readBookList("lib.txt");
+	char filename[20];
+    	strcpy(filename, "lib.txt");
+	list = readBookList(filename);
 	assert(list != NULL);
 }
 
