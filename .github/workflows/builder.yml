@@ -53,3 +53,10 @@ jobs:
           cd lab6/
           make lab6test
           ./test6
+          
+      - name: Build7
+        run: |
+          cd lab7/
+          make lab7test
+          ./test7
+
