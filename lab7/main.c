@@ -319,7 +319,7 @@ int main(void)
         if (outputFile == NULL)
             exit(1);
         print_readers(readers, outputFile);
-         fopen_s(&outputFile2, "output2.txt", "w");
+         outputFile2=fopen("output2.txt", "w");
         if (outputFile2 == NULL)
             exit(1);
         print_list(library, outputFile2);
@@ -329,7 +329,7 @@ int main(void)
 }
 int searchReaderInput(readerNode_t* current, readerList_t* readers)
 {
-    unsigned short ush;
+    unsigned int ush;
     printf("enter the phone number of a reader");
     while (!scanf("%u", &ush))
     {
