@@ -3,6 +3,36 @@
 #include <stdio.h>
 #include <string.h>
 
+ void reverse(char* s)
+ {
+     int i, j;
+     char c;
+ 
+     for (i = 0, j = strlen(s)-1; i<j; i++, j--) 
+     {
+         c = s[i];
+         s[i] = s[j];
+         s[j] = c;
+     }
+ }
+
+char* itoa(int n, char s[])
+{
+     int i, sign;
+ 
+     if ((sign = n) < 0)  /* записываем знак */
+         n = -n;          /* делаем n положительным числом */
+     i = 0;
+     do {       /* генерируем цифры в обратном порядке */
+         s[i++] = n % 10 + '0';   /* берем следующую цифру */
+     } while ((n /= 10) > 0);     /* удаляем */
+     if (sign < 0)
+         s[i++] = '-';
+     s[i] = '\0';
+     reverse(s);
+    return s;
+}
+
 readerList_t* readReaderList(const char* filename)
 {
     
@@ -129,7 +159,8 @@ int giveOutBook(reader_t reader, bookNode_t* node, unsigned short day, unsigned 
 }
 
 int returnBook(reader_t* reader, bookNode_t* node)
-{bookList_t* l ;
+{
+    bookList_t* l ;
     node->book.status = inStock;
     node->book.returnDate.day = 0;
     node->book.returnDate.month = 0;
@@ -168,8 +199,8 @@ int print_readers(readerList_t* list, FILE* file)
          book = &node->reader;
         fputs(book->name, file);
         fputs(book->surname, file);
-        fputs(itoa(book->groupNumber, buffer, 6), file);
-        fputs(itoa(book->phoneNumber, buffer, 11), file);
+        fputs(itoa(book->groupNumber, buffer), file);
+        fputs(itoa(book->phoneNumber, buffer), file);
         fputs(book->email, file);
         fputs(enumStr[book->card], file);
 
