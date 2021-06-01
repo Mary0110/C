@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include "readers.h"
 #include <math.h>
+#include <string.h>
 
 void testreadBookList(bookList_t* list)
 {
