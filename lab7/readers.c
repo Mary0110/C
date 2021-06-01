@@ -35,7 +35,7 @@ readerList_t* readReaderList(const char* filename)
             fgets(newReader->reader.email, 19, file);
             while (getc(file) != '\n' && !feof(file)) 
             {
-                bookNode_t* book = (bookNode_t*)malloc(sizeof(bookNode_t*));
+                bookNode_t* book = (bookNode_t*)malloc(sizeof(bookNode_t));
                 if (!book)
                     exit(1);
                 fgets(book->book.bookName, 19, file);
