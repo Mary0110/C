@@ -40,6 +40,8 @@ typedef struct bookList
 }bookList_t;
 bookList_t* readBookList(const char* filename);
 
+void reverse(char* s);
+char* itoa(int n, char s[]);
 int addBook (bookList_t* lib, bookNode_t* book);
 int deleteBook(bookList_t** lib, bookNode_t* del);
 int count(bookList_t* list);
