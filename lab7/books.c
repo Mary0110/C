@@ -117,7 +117,7 @@ bookList_t* readBookList(const char* filename)
 {
     FILE* file;
     char price[20]; char st[20];
-    bookList_t *temp = (bookList_t*) malloc(sizeof(bookList_t));
+    bookList_t *temp = (bookList_t*)malloc(sizeof(bookList_t));
     if (temp == NULL)
         exit(1);
     temp->size = 0;
@@ -127,7 +127,7 @@ bookList_t* readBookList(const char* filename)
         exit(1);
     while(!feof(file))
     {
-        bookNode_t* book = (bookNode_t*)malloc(sizeof(bookNode_t*));
+        bookNode_t* book = (bookNode_t*)malloc(sizeof(bookNode_t));
         if (!book)
             exit(1);
         fgets(book->book.bookName, 19, file);
