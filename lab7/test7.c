@@ -33,7 +33,7 @@ void  testsearchReader(readerList_t* readerList)
 }
 void testprint_readers(readerList_t* list)
 {
-	FILE* outputFile = NULL; fopen_s(&outputFile, "output.txt", "w");
+	FILE* outputFile = NULL; outputFile=fopen ("output.txt", "w");
 	if (outputFile == NULL)
 		exit(1);
 	assert(print_readers(list, outputFile) == 0);
@@ -94,7 +94,7 @@ void testcountBorrowed(bookList_t* list)
 
 void testprint_list(bookList_t* list)
 {
-	FILE* outputFile = NULL; fopen_s(&outputFile, "output2.txt", "w");
+	FILE* outputFile = NULL; outputFile=fopen( "output2.txt", "w");
 	if (outputFile == NULL)
 		exit(1);
 	assert(print_list(list, outputFile) == 0);
