@@ -349,13 +349,15 @@ int searchReaderInput(readerNode_t* current, readerList_t* readers)
 }
 int searchBookInput(bookNode_t* current, bookList_t* lib)
 {
-    char str[20];
+    char str[20]; char name[20];
     printf("Enter name of a book: ");
     current = searchBook(lib, receiveInput(str));
     while (current == NULL)
     {
         printf("Invalid input. Enter name of a book again: ");
-        current = searchBook(lib, receiveInput(str));
+        
+        strcpy(name, receiveInput(str));
+        current = searchBook(lib, name);
     }
     return 0;
 }
