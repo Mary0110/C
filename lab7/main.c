@@ -83,10 +83,12 @@ int main(void)
         case 2:
         {
             bookNode_t* newBook, *b;
-            char str[20];
+            char str[20]; char name[20];
             printf("Enter name of book to copy:\t");
             newBook = (bookNode_t*)malloc(sizeof(bookNode_t));
-            b = searchBook(library, receiveInput(str));
+            
+                strcpy(name, receiveInput(str));
+            b = searchBook(library, name);
             if (newBook && b)
             {
                 strcpy(newBook->book.bookName,  b->book.bookName);
