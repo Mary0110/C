@@ -49,7 +49,6 @@ int main(void)
 	assert(returnBook(list->head->reader, blist->head) == 0);
 	assert(fineReader(list->head->reader, 1) == 0);
 	assert(countReaders(list) == 3);
-	printf("%d%d",count(blist),countBorrowed(blist));
 	assert(count(blist) == 6);
 	assert(countBorrowed(blist) == 5);
 	printf("tested successfully");
