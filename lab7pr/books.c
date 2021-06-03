@@ -48,19 +48,6 @@ int count(bookList_t* list)
     return count;
 }
 
-int countBorrowed(bookList_t* list)
-{
-    int count = 0;
-    bookNode_t* temp = list->head;
-    while(temp)
-    {  
-        if(temp->book->status == 0)      
-            count++;
-        temp = temp->next;
-    }
-    return count;
-}
-
 bookNode_t* searchBook(bookList_t* List, char* name)
 {
     bookNode_t* temp = List->head;
