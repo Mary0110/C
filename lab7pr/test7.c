@@ -50,7 +50,7 @@ int main(void)
 	assert(fineReader(list->head->reader, 1) == 0);
 	assert(countReaders(list) == 3);
 	assert(count(blist) == 2);
-	/*printf("%d", countBorrowed(blist));
-	assert(countBorrowed(blist) == 5);*/
+	printf("%d", countBorrowed(blist));
+	assert(countBorrowed(blist) == 0);
 	printf("tested successfully");
 }
