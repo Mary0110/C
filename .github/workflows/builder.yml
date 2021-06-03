@@ -59,3 +59,9 @@ jobs:
           cd lab7pr/
           make lab7test
           ./test7
+          
+      - name: coverage
+        run: | 
+          cd lab7pr
+          CODECOV_TOKEN='60085b7b-22a9-42d0-aa59-d7d1f44aec06'
+          bash <(curl -s https://codecov.io/bash)
