@@ -45,7 +45,6 @@ int deleteBook(bookList_t* list, bookNode_t* del)
 
     if (del->prev != NULL)
         del->prev->next = del->next;
-    free(del->book);
     free(del);
     return 0;
 }
