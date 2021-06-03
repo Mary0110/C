@@ -39,7 +39,7 @@ int main(void)
 	strcpy(book->returnDate.month, "mm");
 	strcpy(book->returnDate.year, "yy");	
 	assert(addReader(list, reader) == 0);
-	assert(searchReader(list, "Ivanov\n")!= NULL);
+	assert(searchReader(list, "Ivanov")!= NULL);
 	assert(deleteReader(list, searchReader(list, "poznyakevich")) == 0); 
 
 	assert(addBook(blist, book) == 0);	
