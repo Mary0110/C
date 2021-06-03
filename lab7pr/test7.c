@@ -8,14 +8,13 @@
 #undef main
 int main(void)
 { 
-	char buf[20];
+	char buf[20]; 
 	book_t* book = (book_t*)malloc(sizeof(book_t));
 	reader_t* reader = (reader_t*)malloc(sizeof(reader_t));
 	assert(book != NULL);
 	assert(reader!=NULL);
-    assert( readBookList("lib.txt") !=NULL);
-    assert(readReaderList("readers.txt") != NULL);
-
+   	 assert( readBookList("lib.txt") !=NULL);
+   	 assert(readReaderList("readers.txt") != NULL);
 	readerList_t* list =readReaderList("readers.txt");
 	bookList_t* blist =  readBookList("lib.txt");
 
