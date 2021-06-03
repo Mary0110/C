@@ -45,7 +45,6 @@ int main(void)
 	assert(addBook(blist, book) == 0);	
 	assert(deleteBook(blist, searchBook(blist, "svf\n")) == 0);
     
-	assert(searchBook(blist, "We\n") != NULL);
 	assert(giveOutBook(list->head->reader, blist->head->book, "first", "march", "year:2022") == 0);
 	assert(returnBook(list->head->reader, blist->head) == 0);
 	assert(fineReader(list->head->reader, 1) == 0);
