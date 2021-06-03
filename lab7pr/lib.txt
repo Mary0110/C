@@ -17,7 +17,7 @@ year:2020
 We
 Zamyatin
 &1
-inStock
+borrowed
 -
 day:1
 month:4
