@@ -39,7 +39,7 @@ int main(void)
 	strcpy(book->returnDate.month, "mm");
 	strcpy(book->returnDate.year, "yy");	
 	assert(addReader(list, reader) == 0);
-	/*assert(searchReader(list, "Ivanov")!= NULL);*/
+	/*assert(searchReader(list, "Ivanov") == NULL);*/
 	assert(deleteReader(list, searchReader(list, "poznyakevich")) == 0); 
 
 	assert(addBook(blist, book) == 0);	
@@ -49,6 +49,7 @@ int main(void)
 	assert(returnBook(list->head->reader, blist->head) == 0);
 	assert(fineReader(list->head->reader, 1) == 0);
 	assert(countReaders(list) == 3);
+	puts(count(blist));
 	/*assert(count(blist) == 6);
 	assert(countBorrowed(blist) == 5);*/
 	printf("tested successfully");
