@@ -68,7 +68,6 @@ int deleteReader(readerList_t* list, readerNode_t* del)
 
     if (del->prev != NULL)
         del->prev->next = del->next;
-    free(del->reader);
     free(del);
     return 0;
 }
