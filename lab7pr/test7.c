@@ -39,6 +39,8 @@ int main(void)
 	strcpy(book->returnDate.year, "yy");	
 	assert(addReader(list, reader) == 0);
 	assert(searchReader(list, "poznyakevich") != NULL);
+		assert(searchReader(list, "poznyake") == NULL);
+
 	assert(deleteReader(list, searchReader(list, "poznyakevich")) == 0); 
 
 	assert(addBook(blist, book) == 0);	
