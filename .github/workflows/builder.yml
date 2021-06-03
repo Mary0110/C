@@ -56,6 +56,6 @@ jobs:
           
       - name: Build71
         run: |
-          cd lab7/
+          cd lab7pr/
           make lab7test
           ./test7
