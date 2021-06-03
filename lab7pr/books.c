@@ -83,8 +83,9 @@ bookList_t* readBookList(const char* filename)
         fgets(book->bookName, 20, file);
         fgets(book->author, 20, file);
         fgets(book->price  , 20, file);
-        fgets(st, 20, file);
-        strcpy(buffer, "inStock\n");
+        gets(st, 20, file);
+            getchar();
+        strcpy(buffer, "inStock");
         if (strcmp(st, buffer) == 0)
             book->status = 1;
         else
